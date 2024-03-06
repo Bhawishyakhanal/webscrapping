@@ -27,8 +27,8 @@ for job_url in job_urls:
     full_url = domain + job_url
     # print(full_url)
     url = full_url
-    # if full_url == "https://www.reed.co.uk/jobs/risk-data-analyst/52190438?source=searchResults&filter=%2Fjobs%2Fdata-analyst-jobs":
-    #     continue
+    if full_url == "https://www.reed.co.uk/jobs/risk-data-analyst/52190438?source=searchResults&filter=%2Fjobs%2Fdata-analyst-jobs":
+        continue
     response = requests.get(url)
     tree = html.fromstring(response.content)
 
